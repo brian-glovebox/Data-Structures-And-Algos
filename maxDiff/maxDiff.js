@@ -22,5 +22,5 @@ function maxDiff(arr, arr_size) {
 }
 
 let arr = [1, 2, 90, 10, 110];
-let size = arr.length;
+let size = arr.length
 maxDiff(arr,size);
