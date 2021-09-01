@@ -1,4 +1,4 @@
-export const tree = {
+const tree = {
 	"Sagar": {
 		value: "Sagar",
 		left: "Stanley",
@@ -52,7 +52,7 @@ let usersFriend = {
 	"Andy":0
 }
 
-export let SearchForMutualFriends = (tree, username, searchUser) => {
+let SearchForMutualFriends = (tree, username, searchUser) => {
 	if(username.value === searchUser ){
 		return `It is you.\n`;
 	}
@@ -100,7 +100,7 @@ export let SearchForMutualFriends = (tree, username, searchUser) => {
 
 //Recommednation system
 
-export let userRecommendations = (tree, username) => {
+let userRecommendations = (tree, username) => {
 	// make a queue array
 	let queue = [];
 	let userRecmList = [];
@@ -139,6 +139,6 @@ export let userRecommendations = (tree, username) => {
 };
 
 
-// SearchForMutualFriends(tree,tree['Sagar'],'Dwight');
+console.log(SearchForMutualFriends(tree,tree['Sagar'],'Michael'));
 
 // userRecommendations(tree,tree['Sagar']);
