@@ -40,37 +40,53 @@ function toFindDuplicates() {
 
     if (resultToReturn) {
         console.log('Duplicate elements exist');
-        }
-        else {
-            console.log('Duplicates dont exist ');
-            }
-        }
+    } else {
+        console.log('Duplicates dont exist ');
+    }
+}
 
-        function toFindDuplicates(element, index) {
-            let arry = [1, 2, 1, 3, 4, 3, 5];
-            let resultToReturn = false;
-            for (let i = 0; i < arry.length; i++) { // nested for loop
-                for (let j = 0; j < arry.length; j++) {
-                    // prevents the element from comparing with itself
-                    if (i !== j) {
-                        // check if elements' values are equal
-                        if (arry[i] === arry[j]) {
-                            // duplicate element present                                
-                            resultToReturn = true;
-                            // terminate inner loop
-                            break;
-                        }
-                    }
-                }
-                // terminate outer loop                                                                      
-                if (resultToReturn) {
+function toFindDuplicates(element, index) {
+    let arry = [1, 2, 1, 3, 4, 3, 5];
+    let resultToReturn = false;
+    for (let i = 0; i < arry.length; i++) { // nested for loop
+        for (let j = 0; j < arry.length; j++) {
+            // prevents the element from comparing with itself
+            if (i !== j) {
+                // check if elements' values are equal
+                if (arry[i] === arry[j]) {
+                    // duplicate element present                                
+                    resultToReturn = true;
+                    // terminate inner loop
                     break;
                 }
             }
-            if(resultToReturn) {
-                    console.log('Duplicate elements exist');
-                    }
-                    else {
-                        console.log('Duplicates dont exist ');
-                        }
-                    }
+        }
+        // terminate outer loop                                                                      
+        if (resultToReturn) {
+            break;
+        }
+    }
+    if (resultToReturn) {
+        console.log('Duplicate elements exist');
+    } else {
+        console.log('Duplicates dont exist ');
+    }
+}
+
+export function detectDuplicateResponses(responses) {
+    let returnBool = false;
+    const duplicateObj = {};
+
+    for (let i = 0; i < responses.length; i++) {
+        console.log(responses[i])
+        const stringify = JSON.stringify(responses[i].votes)
+        if (duplicateObj[stringify]) {
+            returnBool = true
+            return returnBool
+        }
+        duplicateObj[stringify] = true
+
+    }
+        return false;
+    
+}
