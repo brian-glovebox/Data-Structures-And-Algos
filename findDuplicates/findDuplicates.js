@@ -63,7 +63,7 @@ function toFindDuplicates(element, index) {
         }
         // terminate outer loop                                                                      
         if (resultToReturn) {
-            break;
+            break
         }
     }
     if (resultToReturn) {
