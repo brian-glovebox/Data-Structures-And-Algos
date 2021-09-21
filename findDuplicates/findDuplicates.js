@@ -54,7 +54,7 @@ function toFindDuplicates(element, index) {
             if (i !== j) {
                 // check if elements' values are equal
                 if (arry[i] === arry[j]) {
-                    // duplicate element present                                
+                                                  
                     resultToReturn = true;
                     // terminate inner loop
                     break;
