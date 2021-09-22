@@ -54,7 +54,7 @@ let usersFriend = {
 
 let SearchForMutualFriends = (tree, username, searchUser) => {
 	if(username.value === searchUser ){
-		return `It is you.\n`;
+		return `It is you.\n`
 	}
 
 	if(usersFriend.hasOwnProperty(searchUser)){
