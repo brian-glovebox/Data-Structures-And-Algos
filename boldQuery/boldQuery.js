@@ -7,7 +7,7 @@ function highlightResult(query, result) {
         if (element.includes(query)) {
             element = element.replaceAll(query, `<b>${query}</b>`);
         }
-        highlightedResult.push(element);
+        highlightedResult.push(element)
     }
     return highlightedResult.join(" ");
 };
