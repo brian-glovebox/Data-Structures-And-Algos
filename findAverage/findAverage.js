@@ -9,7 +9,7 @@ function findAverage(accumulator, currentValue, index, array) {
     }
 
     // Add the current value to our total.
-    return accumulator + currentValue;
+    return accumulator + currentValue
 }
 
 // Pass the 'findAverage' function into the reduce method.
